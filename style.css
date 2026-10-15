@@ -1,0 +1,17 @@
+/* One small stylesheet for both pages: readable text, follows the system's
+   light or dark setting. */
+:root { --bg: #fdfcf9; --text: #222; --muted: #555; --link: #1a5fb4; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #1d1d1f; --text: #e8e6e3; --muted: #aaa; --link: #78aeed; }
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main { max-width: 40rem; margin: 0 auto; padding: 3rem 16px; }
+h1 { font-size: 2rem; margin: 0 0 1rem; }
+h2 { font-size: 1.2rem; margin: 2rem 0 0.5rem; }
+a { color: var(--link); }
+code { font-size: 0.95em; color: var(--muted); }
